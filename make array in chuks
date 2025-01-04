@@ -1,0 +1,24 @@
+let arr = [1,2,3,4,5];
+//output = [[1,2],[3,4], 5]
+
+
+let result = [];
+let score = []
+let count = 0
+let k = 2;
+
+for(let i = 0 ; i < arr.length ; i++){
+     score.push(arr[i])
+        count++
+    if(count === k){
+        console.log(score[i],"thisi s score")
+        result.push(score)
+        score = []
+        count = 0
+    }
+    console.log(score)
+}
+if(score.length > 0){
+    result.push(score)
+}
+console.log(result,"this is result")
