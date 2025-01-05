@@ -1,0 +1,17 @@
+let printNae = function(a,b){
+    console.log(this.name+"ok"+this.name2);
+}
+let obj = {
+    name:"deepak",
+    name2: "deepak2"
+}
+
+// printNae.call(obj,"ok") this is for call 
+
+
+// printNae.apply(obj,["ok","here"]) this is for apply
+
+
+// let store = printNae.bind(obj) this is for bind
+store()
+
