@@ -1,0 +1,20 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var removeDuplicates = function(nums) {
+    let arr = nums
+    let map = new Map();
+for(let i = 0 ; i < arr.length ; i++){
+ map.set(arr[i], (map.get(arr[i]) || 0) + 1)
+}
+let k = []
+for(let [key,value] of map){
+   k.push(key)
+}
+for(let i = 0 ; i < k.length ; i++){
+ nums[i] = k[i]
+}
+// console.log(store)
+return k.length
+};
