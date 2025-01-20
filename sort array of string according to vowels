@@ -1,0 +1,55 @@
+<script>
+
+	// JavaScript implementation of the approach
+	
+	// Function to check the Vowel
+	function isVowel(ch)
+	{
+		ch = ch.toUpperCase();
+		return (ch == 'A' || ch == 'E'
+				|| ch == 'I' || ch == 'O'
+				|| ch == 'U');
+	}
+	
+	// Returns count of vowels in str
+	function countVowels(str)
+	{
+		let count = 0;
+		for (let i = 0; i < str.length; i++)
+			if (isVowel(str[i])) // Check for vowel
+				++count;
+		return count;
+	}
+	
+	// Function to sort the array according to
+	// the number of the vowels
+	function sortArr(arr, n)
+	{
+		
+		// Vector to store the number of vowels
+		// with respective elements
+		let vp = [];
+	
+		// Inserting number of vowels
+		// with respective strings
+		// in the vector pair
+		for (let i = 0; i < n; i++)
+		{ 
+			vp.push([countVowels(arr[i]), arr[i]]);
+		}
+	
+		// Sort the vector, this will sort the pair
+		// according to the number of vowels
+		vp.sort();
+	
+		// Print the sorted vector content
+		for (let i = 0; i < vp.length; i++)
+			document.write(vp[i][1] + " ");
+	}
+	
+	let arr = [ "lmno", "pqrst", "aeiou", "xyz" ];
+	let n = arr.length;
+	sortArr(arr, n);
+	
+</script>
+
